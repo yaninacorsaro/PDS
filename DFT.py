@@ -9,7 +9,7 @@ from sen import mi_funcion_sen
 from scipy.fftpack import fft, fftfreq
 
 def twiddle_factor(k, n, N):
-    Wk = np.cos(2*np.pi*k*n/N ) + np.sin(2*np.pi*k*n/N)*1j
+    Wk = np.cos(2*np.pi*k*n/N ) - np.sin(2*np.pi*k*n/N)*1j
     return Wk
 
 N  = 100 # muestras
@@ -28,6 +28,7 @@ fftabs=np.abs(fft)
 fftangle=np.angle(fft)
 '''
 fft = fft(y)
+
 fftabs=np.abs(fft)
 fftangle=np.angle(fft)
 
