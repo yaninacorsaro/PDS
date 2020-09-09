@@ -4,7 +4,7 @@ import numpy as np
 
 def mi_funcion_sen( vmax , dc , ff , ph, nn , fs ):
      
-    tt = np.linspace( start= 0, stop= nn/fs ,num = nn)
+    tt = np.linspace( start= 0, stop= (nn-1)/fs ,num = nn)
     xx = vmax*np.sin(tt*2*np.pi*ff+ph) + dc
     return tt, xx
 
